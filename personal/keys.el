@@ -1,3 +1,4 @@
+;;; Code
 (define-key evil-normal-state-map "s" 'evil-forward-char)
 
 (define-key evil-motion-state-map "n" 'evil-previous-line)
@@ -10,7 +11,7 @@
 (global-evil-leader-mode)
 
 (evil-leader/set-leader ",")
-(evil-leader/set-key "e" 'find-file)
+(evil-leader/set-key "e" 'projectile-find-file)
 (evil-leader/set-key "w" 'evil-write)
 (evil-leader/set-key "," 'evil-write)
 (evil-leader/set-key "." 'evil-write)
