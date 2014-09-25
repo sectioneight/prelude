@@ -19,6 +19,8 @@
 (evil-leader/set-key "," 'evil-write)
 (evil-leader/set-key "." 'evil-write)
 
+(evil-leader/set-key "n" 'helm-mini)
+
 ;; evil nerd commenter hotkeys
 (evilnc-default-hotkeys)
 
