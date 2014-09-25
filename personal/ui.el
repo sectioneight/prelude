@@ -24,4 +24,4 @@
 
 (load-theme 'lush t)
 
-(git-gutter+-mode)
+(global-git-gutter+-mode t)
