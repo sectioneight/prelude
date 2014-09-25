@@ -16,9 +16,12 @@
 )
 
 (require 'powerline)
+(powerline-default-theme)
 
 (menu-bar-mode -1)
 (setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
 
 (load-theme 'lush t)
+
+(git-gutter+-mode)
