@@ -19,5 +19,10 @@
 (evil-leader/set-key "," 'evil-write)
 (evil-leader/set-key "." 'evil-write)
 
+;; evil nerd commenter hotkeys
+(evilnc-default-hotkeys)
+
+(evil-leader/set-key "-" 'evilnc-comment-or-uncomment-lines)
+
 (provide 'keys)
 ;;; keys.el ends here
