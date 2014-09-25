@@ -1,4 +1,7 @@
 ;;; Code
+
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
 (define-key evil-normal-state-map "s" 'evil-forward-char)
 
 (define-key evil-motion-state-map "n" 'evil-previous-line)

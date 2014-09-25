@@ -17,5 +17,8 @@
 
 (require 'powerline)
 
-(load-theme 'lush t)
 (menu-bar-mode -1)
+(setq inhibit-startup-message t)
+(setq inhibit-splash-screen t)
+
+(load-theme 'lush t)
