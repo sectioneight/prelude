@@ -28,3 +28,5 @@
 (load-theme 'lush t)
 
 (global-git-gutter+-mode t)
+
+(setq initial-scratch-buffer nil)
