@@ -15,8 +15,8 @@
   (setq mouse-sel-mode t)
 )
 
-(require 'powerline)
-(powerline-default-theme)
+;; (require 'powerline)
+;; (powerline-default-theme)
 
 (menu-bar-mode -1)
 (setq inhibit-startup-message t)

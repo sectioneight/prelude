@@ -1,4 +1,5 @@
 ;;; Code
+(setq prelude-guru nil)
 
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
@@ -14,11 +15,12 @@
 (global-evil-leader-mode)
 
 (evil-leader/set-leader ",")
-(evil-leader/set-key "e" 'projectile-find-file)
+
 (evil-leader/set-key "w" 'evil-write)
 (evil-leader/set-key "," 'evil-write)
 (evil-leader/set-key "." 'evil-write)
 
+(evil-leader/set-key "e" 'projectile-find-file)
 (evil-leader/set-key "n" 'helm-mini)
 
 ;; evil nerd commenter hotkeys
