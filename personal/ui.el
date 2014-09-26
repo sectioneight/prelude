@@ -15,6 +15,9 @@
   (setq mouse-sel-mode t)
 )
 
+(if window-system
+  (scroll-bar-mode -1))
+
 ;; (require 'powerline)
 ;; (powerline-default-theme)
 
