@@ -28,5 +28,8 @@
 
 (evil-leader/set-key "-" 'evilnc-comment-or-uncomment-lines)
 
+;; better m-x
+(global-set-key (kbd "M-x") 'helm-M-x)
+
 (provide 'keys)
 ;;; keys.el ends here
