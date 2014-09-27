@@ -12,8 +12,7 @@
                               (interactive)
                               (scroll-up 1)))
   (defun track-mouse (e))
-  (setq mouse-sel-mode t)
-)
+  (setq mouse-sel-mode t))
 
 (if window-system
   (scroll-bar-mode -1))
@@ -22,11 +21,10 @@
 ;; (powerline-default-theme)
 
 (menu-bar-mode -1)
+(setq initial-scratch-buffer nil)
 (setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
 
 (load-theme 'lush t)
 
 (global-git-gutter+-mode t)
-
-(setq initial-scratch-buffer nil)

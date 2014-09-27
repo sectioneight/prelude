@@ -1,7 +1,8 @@
 ;;; Code
 (setq prelude-guru nil)
 
-(define-key global-map (kbd "RET") 'newline-and-indent)
+;; (define-key global-map (kbd "RET") 'newline-and-indent)
+(electric-indent-mode +1)
 
 (define-key evil-normal-state-map "s" 'evil-forward-char)
 
@@ -23,6 +24,7 @@
 
 (evil-leader/set-key "e" 'projectile-find-file)
 (evil-leader/set-key "n" 'helm-mini)
+(evil-leader/set-key "g" 'helm-M-x)
 
 ;; evil nerd commenter hotkeys
 (evilnc-default-hotkeys)
