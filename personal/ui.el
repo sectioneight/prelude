@@ -28,3 +28,6 @@
 (load-theme 'lush t)
 
 (global-git-gutter+-mode t)
+
+;; follow symlinks with a warning under vc
+(setq vc-follow-symlinks nil)
