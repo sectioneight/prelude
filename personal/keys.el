@@ -1,8 +1,8 @@
 ;;; Code
 (setq prelude-guru nil)
 
-;; (define-key global-map (kbd "RET") 'newline-and-indent)
-(electric-indent-mode +1)
+(define-key global-map (kbd "RET") 'newline-and-indent)
+;; (electric-indent-mode +1)
 
 (define-key evil-normal-state-map "s" 'evil-forward-char)
 
@@ -33,6 +33,10 @@
 
 ;; better m-x
 (global-set-key (kbd "M-x") 'helm-M-x)
+
+;; git rebase mode is dumb
+(setq auto-mode-alist (delete '("git-rebase-todo" . rebase-mode)
+                              auto-mode-alist))
 
 (provide 'keys)
 ;;; keys.el ends here
