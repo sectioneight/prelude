@@ -31,3 +31,10 @@
 
 ;; follow symlinks with a warning under vc
 (setq vc-follow-symlinks nil)
+
+(set-display-table-slot standard-display-table
+                        'vertical-border (make-glyph-code 8203))
+
+(set-face-attribute 'vertical-border
+                    nil
+                    :foreground "#282a2e")
