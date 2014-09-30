@@ -40,3 +40,6 @@
 (set-face-attribute 'vertical-border
                     nil
                     :foreground "#282a2e")
+
+;; display tabs as two-spaces, helpful for golang
+(setq tab-width 2)
