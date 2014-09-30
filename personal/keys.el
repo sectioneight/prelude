@@ -12,6 +12,8 @@
 (define-key evil-motion-state-map "h" 'evil-backward-char)
 (define-key evil-motion-state-map "s" 'evil-forward-char)
 
+(define-key evil-normal-state-map (kbd "DEL") 'delete-window)
+
 ;; leader
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -20,7 +22,6 @@
 
 (evil-leader/set-key "w" 'evil-write)
 (evil-leader/set-key "," 'evil-write)
-(evil-leader/set-key "." 'evil-write)
 
 (evil-leader/set-key "e" 'projectile-find-file)
 (evil-leader/set-key "n" 'helm-mini)
@@ -46,6 +47,23 @@
                 (remove-if-not 'buffer-file-name (buffer-list)))))
 
 (setq-default auto-fill-function 'do-auto-fill)
+
+(defun vi-line-above ()
+  "Insert a line above."
+  (interactive)
+  (save-excursion
+    (evil-open-above 1)
+    (evil-force-normal-state)))
+
+(defun vi-line-below ()
+  "Insert a line below."
+  (interactive)
+  (save-excursion
+    (evil-open-below 1)
+    (evil-force-normal-state)))
+
+(evil-leader/set-key "." 'vi-line-above)
+(evil-leader/set-key "u" 'vi-line-below)
 
 (provide 'keys)
 ;;; keys.el ends here
