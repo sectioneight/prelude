@@ -65,5 +65,14 @@
 (evil-leader/set-key "." 'vi-line-above)
 (evil-leader/set-key "u" 'vi-line-below)
 
+
+(defun go-to-reviewers()
+  (interactive)
+  "Go to reviewers section of `arc diff`"
+  (search-forward "Reviewers:")
+  (evil-append-line 1))
+
+(define-key evil-motion-state-map "gr" 'go-to-reviewers)
+
 (provide 'keys)
 ;;; keys.el ends here
