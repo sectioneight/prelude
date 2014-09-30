@@ -32,6 +32,8 @@
 ;; follow symlinks with a warning under vc
 (setq vc-follow-symlinks nil)
 
+(setq-default fill-column 80)
+
 (set-display-table-slot standard-display-table
                         'vertical-border (make-glyph-code 8203))
 

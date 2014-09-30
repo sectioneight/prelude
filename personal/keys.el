@@ -38,5 +38,14 @@
 (setq auto-mode-alist (delete '("git-rebase-todo" . rebase-mode)
                               auto-mode-alist))
 
+(defun kill-other-buffers ()
+    "Kill all other buffers."
+    (interactive)
+    (mapc 'kill-buffer
+          (delq (current-buffer)
+                (remove-if-not 'buffer-file-name (buffer-list)))))
+
+(setq-default auto-fill-function 'do-auto-fill)
+
 (provide 'keys)
 ;;; keys.el ends here
