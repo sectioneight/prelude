@@ -1,3 +1,6 @@
 /elpa
 /savefile
 /.cask
+/nagios
+*.jpg
+*.png
