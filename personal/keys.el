@@ -27,6 +27,9 @@
 (evil-leader/set-key "n" 'helm-mini)
 (evil-leader/set-key "g" 'helm-M-x)
 
+(evil-leader/set-key "y" 'helm-show-kill-ring)
+(evil-leader/set-key "cd" 'cd)
+
 ;; evil nerd commenter hotkeys
 (evilnc-default-hotkeys)
 
@@ -38,6 +41,8 @@
 ;; git rebase mode is dumb
 (setq auto-mode-alist (delete '("git-rebase-todo" . rebase-mode)
                               auto-mode-alist))
+
+(add-to-list 'auto-mode-alist '("git-rebase-todo" . git-commit-mode))
 
 (defun kill-other-buffers ()
     "Kill all other buffers."
@@ -64,7 +69,6 @@
 
 (evil-leader/set-key "." 'vi-line-above)
 (evil-leader/set-key "u" 'vi-line-below)
-
 
 (defun go-to-reviewers()
   (interactive)
