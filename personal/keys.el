@@ -80,5 +80,11 @@
 
 (define-key evil-motion-state-map "gr" 'go-to-reviewers)
 
+(defun pbpaste ()
+  (interactive)
+  (call-process-region (point) (if mark-active (mark) (point)) "pbpaste" t t))
+
+(global-set-key (kbd "C-c v") 'pbpaste)
+
 (provide 'keys)
 ;;; keys.el ends here
