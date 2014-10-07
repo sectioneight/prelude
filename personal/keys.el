@@ -15,6 +15,7 @@
 (define-key evil-normal-state-map (kbd "DEL") 'delete-window)
 
 ;; leader
+(prelude-require-package 'evil-leader)
 (require 'evil-leader)
 (global-evil-leader-mode)
 
@@ -31,6 +32,7 @@
 (evil-leader/set-key "cd" 'cd)
 
 ;; evil nerd commenter hotkeys
+(prelude-require-package 'evil-nerd-commenter)
 (evilnc-default-hotkeys)
 
 (evil-leader/set-key "-" 'evilnc-comment-or-uncomment-lines)

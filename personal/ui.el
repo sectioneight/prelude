@@ -25,8 +25,10 @@
 (setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
 
+(prelude-require-package 'lush-theme)
 (load-theme 'lush t)
 
+(prelude-require-package 'git-gutter+)
 (global-git-gutter+-mode t)
 
 ;; follow symlinks with a warning under vc
