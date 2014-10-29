@@ -108,8 +108,8 @@ See `x-set-selection'."
   (setq interprogram-paste-function nil))
 
 
-(add-hook 'terminal-init-xterm-hook 'turn-on-pbcopy)
+;; (add-hook 'terminal-init-xterm-hook 'turn-on-pbcopy)
 
-(turn-on-pbcopy)
+;; (turn-on-pbcopy)
 
 (provide 'pbcopy)

@@ -72,6 +72,8 @@
 (evil-leader/set-key "." 'vi-line-above)
 (evil-leader/set-key "u" 'vi-line-below)
 
+(evil-leader/set-key "s" 'sort-lines)
+
 (defun go-to-reviewers()
   (interactive)
   "Go to reviewers section of `arc diff`"
@@ -85,6 +87,14 @@
   (call-process-region (point) (if mark-active (mark) (point)) "pbpaste" t t))
 
 (global-set-key (kbd "C-c v") 'pbpaste)
+
+(defun tell-emacsclients-for-buffer-to-die ()
+  "Sends error exit command to every client for the current buffer."
+  (interactive)
+  (dolist (proc server-buffer-clients)
+    (server-send-string proc "-error die")))
+
+(evil-leader/set-key "cq" 'tell-emacsclients-for-buffer-to-die)
 
 (provide 'keys)
 ;;; keys.el ends here
