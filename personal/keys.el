@@ -114,5 +114,7 @@
 
 (evil-leader/set-key "cq" 'tell-emacsclients-for-buffer-to-die)
 
+(evil-leader/set-key "m" 'magit-status)
+
 (provide 'keys)
 ;;; keys.el ends here
