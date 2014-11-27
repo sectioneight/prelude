@@ -14,15 +14,22 @@
 
 (define-key evil-normal-state-map (kbd "DEL") 'delete-window)
 
+(defun select-paragraph ()
+  "Select inside paragraph."
+  (interactive)
+  (backward-paragraph)
+  (evil-next-line)
+  (evil-visual-line)
+  (forward-paragraph)
+  (evil-previous-line))
+
 ;; leader
 (prelude-require-package 'evil-leader)
-(require 'evil-leader)
 (global-evil-leader-mode)
 
 (evil-leader/set-leader ",")
 
 (evil-leader/set-key "w" 'evil-write)
-(evil-leader/set-key "," 'evil-write)
 
 (evil-leader/set-key "e" 'projectile-find-file)
 (evil-leader/set-key "n" 'helm-mini)
@@ -30,6 +37,8 @@
 
 (evil-leader/set-key "y" 'helm-show-kill-ring)
 (evil-leader/set-key "cd" 'cd)
+
+(evil-leader/set-key "r" 'select-paragraph)
 
 ;; evil nerd commenter hotkeys
 (prelude-require-package 'evil-nerd-commenter)
@@ -69,8 +78,17 @@
     (evil-open-below 1)
     (evil-force-normal-state)))
 
+(defun trailing-comma ()
+  "Add a trailing comma!"
+  (interactive)
+  (save-excursion
+    (evil-append-line 1)
+    (insert ",")
+    (evil-force-normal-state)))
+
 (evil-leader/set-key "." 'vi-line-above)
 (evil-leader/set-key "u" 'vi-line-below)
+(evil-leader/set-key "d" 'trailing-comma)
 
 (evil-leader/set-key "s" 'sort-lines)
 
