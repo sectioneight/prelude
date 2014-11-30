@@ -15,8 +15,9 @@
   (setq mouse-sel-mode t))
 
 (if window-system
-  (set-default-font "Menlo-13")
-  (scroll-bar-mode -1))
+  (progn
+    (set-frame-font "Menlo-13")
+    (scroll-bar-mode -1)))
 
 ;; (require 'powerline)
 ;; (powerline-default-theme)
