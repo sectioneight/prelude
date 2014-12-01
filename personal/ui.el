@@ -16,11 +16,8 @@
 
 (if window-system
   (progn
-    (set-frame-font "Menlo-13")
+    (set-frame-font "Monaco-13")
     (scroll-bar-mode -1)))
-
-;; (require 'powerline)
-;; (powerline-default-theme)
 
 (menu-bar-mode -1)
 (setq initial-scratch-buffer nil)
@@ -37,6 +34,7 @@
 (setq vc-follow-symlinks nil)
 
 (setq-default fill-column 80)
+
 
 (set-face-attribute 'vertical-border
                     nil

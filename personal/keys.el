@@ -116,5 +116,12 @@
 
 (evil-leader/set-key "m" 'magit-status)
 
+(defun shift-width (width)
+  (interactive "n")
+  (set-variable 'evil-shift-width width))
+
+(evil-leader/set-key "2" (lambda () (interactive) (shift-width 2)))
+(evil-leader/set-key "4" (lambda () (interactive) (shift-width 4)))
+
 (provide 'keys)
 ;;; keys.el ends here
