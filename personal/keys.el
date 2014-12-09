@@ -48,6 +48,7 @@
 
 ;; better m-x
 (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-b") 'hippie-expand)
 
 ;; git rebase mode is dumb
 (setq auto-mode-alist (delete '("git-rebase-todo" . rebase-mode)
