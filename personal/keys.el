@@ -49,6 +49,9 @@
 ;; better m-x
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-b") 'hippie-expand)
+;; disable evil-states toggle
+(define-key evil-motion-state-map (kbd "C-z") nil)
+(define-key evil-insert-state-map (kbd "C-z") nil)
 
 ;; git rebase mode is dumb
 (setq auto-mode-alist (delete '("git-rebase-todo" . rebase-mode)
