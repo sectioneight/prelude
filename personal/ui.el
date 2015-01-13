@@ -16,6 +16,7 @@
 
 (if window-system
   (progn
+    (nyan-mode)
     (set-frame-font "Monaco-13")
     (scroll-bar-mode -1)))
 
