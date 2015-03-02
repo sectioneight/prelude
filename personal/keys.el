@@ -31,7 +31,8 @@
 
 (evil-leader/set-key "w" 'evil-write)
 
-(evil-leader/set-key "e" 'projectile-find-file)
+;; (evil-leader/set-key "e" 'projectile-find-file)
+(evil-leader/set-key "e" 'helm-projectile)
 (evil-leader/set-key "n" 'helm-mini)
 (evil-leader/set-key "g" 'helm-M-x)
 
