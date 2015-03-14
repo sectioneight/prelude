@@ -120,6 +120,9 @@
 
 (evil-leader/set-key "m" 'magit-status)
 
+(evil-leader/set-key "b" 'magit-blame-mode)
+(evil-leader/set-key "h" 'magit-blame-locate-commit)
+
 (defun shift-width (width)
   (interactive "n")
   (set-variable 'evil-shift-width width))
