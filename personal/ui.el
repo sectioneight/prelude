@@ -43,3 +43,8 @@
 
 ;; display tabs as two-spaces, helpful for golang
 (setq tab-width 2)
+
+;; highlight the current argument in eldoc with some color
+(set-face-attribute 'eldoc-highlight-function-argument nil
+                    :underline nil :foreground "#00ccdd"
+                    :weight 'bold)
