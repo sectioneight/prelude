@@ -4,12 +4,14 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 ;; (electric-indent-mode +1)
 
-(define-key evil-normal-state-map "s" 'kill-word)
-(define-key evil-normal-state-map "h" 'evil-delete-backward-word)
+(define-key evil-normal-state-map "k" 'kill-word)
+(define-key evil-normal-state-map "j" 'evil-delete-backward-word)
 
 (define-key evil-motion-state-map "l" 'evil-search-next)
 (define-key evil-motion-state-map "n" 'evil-previous-line)
 (define-key evil-motion-state-map "t" 'evil-next-line)
+(define-key evil-motion-state-map "h" 'evil-backward-char)
+(define-key evil-motion-state-map "s" 'evil-forward-char)
 
 (define-key evil-normal-state-map (kbd "DEL") 'delete-window)
 
