@@ -4,6 +4,7 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 ;; (electric-indent-mode +1)
 
+(define-key evil-normal-state-map "s" 'evil-forward-char)
 (define-key evil-normal-state-map "k" 'kill-word)
 (define-key evil-normal-state-map "j" 'evil-delete-backward-word)
 
