@@ -31,16 +31,14 @@
 
 (evil-leader/set-leader ",")
 
-(evil-leader/set-key "w" 'evil-write)
-
-(evil-leader/set-key "e" 'projectile-find-file)
-(evil-leader/set-key "n" 'helm-mini)
-(evil-leader/set-key "g" 'helm-M-x)
-
-(evil-leader/set-key "y" 'helm-show-kill-ring)
-(evil-leader/set-key "cd" 'cd)
-
-(evil-leader/set-key "r" 'select-paragraph)
+(evil-leader/set-key
+  "w" 'evil-write
+  "e" 'projectile-find-file
+  "n" 'helm-mini
+  "g" 'helm-M-x
+  "y" 'helm-show-kill-ring
+  "cd" 'cd
+  "r" 'select-paragraph)
 
 ;; evil nerd commenter hotkeys
 (prelude-require-package 'evil-nerd-commenter)
@@ -92,11 +90,11 @@
     (insert ",")
     (evil-force-normal-state)))
 
-(evil-leader/set-key "." 'vi-line-above)
-(evil-leader/set-key "u" 'vi-line-below)
-(evil-leader/set-key "d" 'trailing-comma)
-
-(evil-leader/set-key "s" 'sort-lines)
+(evil-leader/set-key
+  "." 'vi-line-above
+  "u" 'vi-line-below
+  "d" 'trailing-comma
+  "s" 'sort-lines)
 
 (defun go-to-reviewers()
   (interactive)
@@ -118,19 +116,19 @@
   (dolist (proc server-buffer-clients)
     (server-send-string proc "-error die")))
 
-(evil-leader/set-key "cq" 'tell-emacsclients-for-buffer-to-die)
-
-(evil-leader/set-key "m" 'magit-status)
-
-(evil-leader/set-key "b" 'magit-blame-mode)
-(evil-leader/set-key "h" 'magit-blame-locate-commit)
+(evil-leader/set-key
+  "cq" 'tell-emacsclients-for-buffer-to-die
+  "m" 'magit-status
+  "b" 'magit-blame-mode
+  "h" 'magit-blame-locate-commit)
 
 (defun shift-width (width)
   (interactive "n")
   (set-variable 'evil-shift-width width))
 
-(evil-leader/set-key "2" (lambda () (interactive) (shift-width 2)))
-(evil-leader/set-key "4" (lambda () (interactive) (shift-width 4)))
+(evil-leader/set-key
+  "2" (lambda () (interactive) (shift-width 2))
+  "4" (lambda () (interactive) (shift-width 4)))
 
 (provide 'keys)
 ;;; keys.el ends here
