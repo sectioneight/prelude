@@ -37,6 +37,7 @@
   "n" 'helm-mini
   "g" 'helm-M-x
   "y" 'helm-show-kill-ring
+  "a" 'projectile-ag
   "cd" 'cd
   "r" 'select-paragraph)
 
