@@ -110,6 +110,6 @@ See `x-set-selection'."
 
 ;; (add-hook 'terminal-init-xterm-hook 'turn-on-pbcopy)
 
-;; (turn-on-pbcopy)
+(turn-on-pbcopy)
 
 (provide 'pbcopy)
