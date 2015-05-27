@@ -107,9 +107,21 @@ See `x-set-selection'."
   (setq interprogram-cut-function nil)
   (setq interprogram-paste-function nil))
 
+;;;###autoload
+(defun toggle-pbcopy ()
+  "Toggle pbcopy mode."
+  (interactive)
+  (if (eq interprogram-paste-function nil)
+      (progn
+        (message "enabled pbcopy")
+        (turn-on-pbcopy))
+      (progn
+        (message "disabled pbcopy")
+        (turn-off-pbcopy))))
 
 ;; (add-hook 'terminal-init-xterm-hook 'turn-on-pbcopy)
 
-(turn-on-pbcopy)
+;; does not play will with c-i-" followed by replace since it clobbers the clipboard
+;; (turn-on-pbcopy)
 
 (provide 'pbcopy)

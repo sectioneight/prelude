@@ -38,6 +38,7 @@
   "g" 'helm-M-x
   "y" 'helm-show-kill-ring
   "a" 'projectile-ag
+  "p" 'toggle-pbcopy
   "cd" 'cd
   "r" 'select-paragraph)
 
