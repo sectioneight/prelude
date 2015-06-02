@@ -12,7 +12,7 @@
 
 (defun go-display-cover-out ()
   "Display go coverage from coverage.out"
-  (go-coverage (expand-file-name "./cover.out")))
+  (go-coverage (expand-file-name "./profile.cov")))
 
 (defun golang-compile-and-coverage ()
   "Compile with coverage."
@@ -23,5 +23,7 @@
 
 (evil-leader/set-key-for-mode 'go-mode
   "l" 'golang-compile-and-coverage)
+
+(load-file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el")
 
 ;;; golang.el ends here
